@@ -15,4 +15,19 @@ public class Member {
     private String noTelepon;
     private String tanggalDaftar;
     private String jenisPaket;
+    
+    /**
+     * Constructor lengkap
+     */
+    public Member(String nama, String noTelepon, String tanggalDaftar, String jenisPaket) {
+        this.nama = DEFAULT_NAMA;
+        this.noTelepon = DEFAULT_TELEPON;
+        this.tanggalDaftar = DEFAULT_TANGGAL;
+        this.jenisPaket = DEFAULT_PAKET;
+
+        setNama(nama);
+        setNoTelepon(noTelepon);
+        setTanggalDaftar(tanggalDaftar);
+        setJenisPaket(jenisPaket);
+    }
 }
