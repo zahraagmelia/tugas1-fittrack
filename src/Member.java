@@ -30,4 +30,39 @@ public class Member {
         setTanggalDaftar(tanggalDaftar);
         setJenisPaket(jenisPaket);
     }
+
+    /**
+     * Constructor khusus buat member yang daftar tanpa pilih paket.
+     * Nanti jenis paketnya otomatis ditaruh paket Basic.
+     *
+     * @param nama nama lengkap member
+     * @param noTelepon nomor HP aktif member
+     * @param tanggalDaftar tanggal pertama kali bergabung
+     */
+    public Member(String nama, String noTelepon, String tanggalDaftar) {
+        this(nama, noTelepon, tanggalDaftar, DEFAULT_PAKET);
+    }
+
+    /**
+     * Method buat ngambil data nama member.
+     *
+     * @return nama member saat ini
+     */
+    public String getNama() {
+        return nama;
+    }
+
+    /**
+     * Method buat ngubah nama member.
+     * Ada pengecekan supaya nama gak boleh kosong atau cuma spasi doang.
+     *
+     * @param nama masukan nama baru yang mau disimpan
+     */
+    public void setNama(String nama) {
+        if (nama != null && !nama.trim().isEmpty()) {
+            this.nama = nama;
+        } else {
+            System.out.println("[Gagal Set Nama]: Nama tidak boleh kosong atau hanya berisi spasi.");
+        }
+    }
 }
