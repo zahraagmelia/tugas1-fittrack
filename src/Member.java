@@ -65,4 +65,26 @@ public class Member {
             System.out.println("[Gagal Set Nama]: Nama tidak boleh kosong atau hanya berisi spasi.");
         }
     }
+
+    /**
+     * Mengambil nomor telepon member.
+     *
+     * @return nomor telepon
+     */
+    public String getNoTelepon() {
+        return noTelepon;
+    }
+
+    /**
+     * Mengubah nomor telepon dengan validasi diawali '0' dan minimal 10 digit.
+     *
+     * @param noTelepon nomor telepon baru
+     */
+    public void setNoTelepon(String noTelepon) {
+        if (noTelepon != null && noTelepon.startsWith(AWALAN_TELEPON) && noTelepon.length() >= MIN_PANJANG_TELEPON) {
+            this.noTelepon = noTelepon;
+        } else {
+            System.out.println("[Gagal Set Nomor Telepon]: Nomor telepon harus diawali angka 0 dan minimal " + MIN_PANJANG_TELEPON + " digit.");
+        }
+    }
 }
