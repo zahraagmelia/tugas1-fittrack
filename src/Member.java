@@ -87,4 +87,25 @@ public class Member {
             System.out.println("[Gagal Set Nomor Telepon]: Nomor telepon harus diawali angka 0 dan minimal " + MIN_PANJANG_TELEPON + " digit.");
         }
     }
+    /**
+     * Mengambil tanggal pendaftaran member.
+     *
+     * @return tanggal pendaftaran
+     */
+    public String getTanggalDaftar() {
+        return tanggalDaftar;
+    }
+
+    /**
+     * Mengubah tanggal pendaftaran dengan validasi tidak boleh kosong.
+     *
+     * @param tanggalDaftar tanggal pendaftaran baru
+     */
+    public void setTanggalDaftar(String tanggalDaftar) {
+        if (tanggalDaftar != null && !tanggalDaftar.trim().isEmpty()) {
+            this.tanggalDaftar = tanggalDaftar;
+        } else {
+            System.out.println("[Gagal Set Tanggal]: Tanggal pendaftaran tidak boleh kosong.");
+        }
+    }
 }
