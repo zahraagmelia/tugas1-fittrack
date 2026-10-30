@@ -108,4 +108,27 @@ public class Member {
             System.out.println("[Gagal Set Tanggal]: Tanggal pendaftaran tidak boleh kosong.");
         }
     }
+
+    /**
+     * Mengambil jenis paket keanggotaan member.
+     *
+     * @return jenis paket
+     */
+    public String getJenisPaket() {
+        return jenisPaket;
+    }
+
+    /**
+     * Mengubah jenis paket keanggotaan dengan validasi pilihan paket.
+     * Pilihan yang valid hanya: Basic, Premium, atau VIP.
+     *
+     * @param jenisPaket jenis paket baru
+     */
+    public void setJenisPaket(String jenisPaket) {
+        if (jenisPaket != null && (jenisPaket.equals("Basic") || jenisPaket.equals("Premium") || jenisPaket.equals("VIP"))) {
+            this.jenisPaket = jenisPaket;
+        } else {
+            System.out.println("[Gagal Set Paket]: Jenis paket '" + jenisPaket + "' tidak valid. Pilih antara Basic, Premium, atau VIP.");
+        }
+    }
 }
