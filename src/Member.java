@@ -131,4 +131,12 @@ public class Member {
             System.out.println("[Gagal Set Paket]: Jenis paket '" + jenisPaket + "' tidak valid. Pilih antara Basic, Premium, atau VIP.");
         }
     }
+    /**
+     * Mengembalikan informasi detail member dalam bentuk teks terformat.
+     *
+     */
+    @Override
+    public String toString() {
+        return "Member FitTrack [Nama: " + nama + " | No. Telp: " + noTelepon + " | Tanggal Daftar: " + tanggalDaftar + " | Paket: " + jenisPaket + "]";
+    }
 }
